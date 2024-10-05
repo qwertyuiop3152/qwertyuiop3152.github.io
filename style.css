@@ -1,0 +1,332 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+    box-sizing: border-box;
+    /* font-family: var(--popp); */
+}
+
+:root{
+    --poppins-font-family: "Poppins", sans-serif;
+    --body-color: #010102;
+    --body-alter-color: #4454ff;
+    --main-color: #a14dfa;
+    --hover-color: #f8646c;
+    --container-color: #1d2352;
+    --text-alter-color: #0bd2d4;
+    --text-color: #ffffff;
+}
+
+section{
+    padding: 4rem 0 3rem;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+body{
+    color: var(--text-color);
+    /* background: url("img/3.png") no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed; */
+    background: #080707;
+    overflow-x:hidden;
+    /* overflow-y: hidden; */
+}
+
+.container{
+    max-width: 1060px;
+    margin: auto;
+    width: 100%;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(51, 51, 53, 0.9);
+    z-index: 200;
+}
+
+.nav{
+    max-width: 1200px;
+    margin: auto;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.logo span{
+    color: var(--main-color);
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    column-gap: 1.2rem;
+}
+
+.nav-link{
+    font-size: 1rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.nav-link::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 3px;
+    background: #ababab;
+}
+
+.login-btn{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 2px;
+    border-radius: 10%;
+    background: #f88888;
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+.login-btn .bx{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.login-btn:hover{
+    background: var(--hover-color);
+    transition: 0.4s all linear;
+}
+
+.drop-login{
+    position: absolute;
+    top: 115%;
+    right: 0;
+    width: 231px;
+    height: auto;
+    background: var(--container-color);
+    box-shadow: 4px 4px 10px 2px rgb(23 27 38 / 60%);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+.drop-login .drop-item{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px;
+}
+
+.drop-login .drop-item:hover{
+    background: var(--main-color);
+    transition: 0.3s all linear;
+}
+
+.drop-login .drop-item a{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.drop-login .drop-item span{
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+.drop-login .drop-login-open{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    transition: 0.4s all inherit;
+}
+
+.menu-icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 5px;
+    cursor: pointer;
+    z-index: 200;
+    transition: 0.3s;
+}
+
+.menu-icon div{
+    display: block;
+    background: var(--text-color);
+    height: 2px;
+    width: 25px;
+    transition: 0.3s;
+}
+
+.move .line1{
+    transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.move .lien2{
+    opacity: 0;
+}
+
+.move .line3{
+    transform: rotate(45deg) translate(-5px, -5px);
+}
+
+.home-slide{
+    min-height: 640px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.slide-img{
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    left: 50px;
+    z-index: -1;
+}
+
+/* .home-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(74deg, rgb(23, 27, 68,80%) 50%, rgb(23, 27, 68,14%));
+    z-index: 200;
+} */
+
+.swiper-pagination-bullet{
+
+    width: 15px !important;
+    height: 15px !important;
+    border-radius: 1.2rem !important;
+    position: relative;
+    bottom: 18rem;
+    left: 32rem;
+    background: #656565 !important;
+    opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active{
+    width: 3.5rem !important;
+    background: #dadada !important;
+}
+
+.home-text {
+    z-index: 200;
+}
+
+.slide-title {
+    position: relative;
+    font-size: 2.1rem;
+    left: 1000px;
+    text-transform: uppercase;
+    /* left: 700px; */
+}
+
+.slide-title::after{
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 0px;
+    width: 44px;
+    height: 3px;
+    background: var(--main-color);
+}
+
+.slide-title span {
+    color: var(--main-color);
+}
+
+.slide-description{
+    position: relative;
+    left: 1000px;
+    max-width: 450px;
+    font-size: 0.938rem;
+    margin: 0.2rem 0 1rem;
+}
+
+.btn{
+    position: relative;
+    left: 1000px;
+    display: inline-flex;
+    background: #080707;
+    padding: 10px 16px;
+    color: #ffffff;
+    font-size: 2rem;
+    border-style: solid;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.btn:hover{
+    background: #edda31;
+    transition: 0.3s all linear;
+}
+
+.heading {
+    position: relative;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.heading::after{
+    content: "";
+    position: absolute;
+    display: flex;
+    left:  50%;
+    transform: translate(-50%);
+    bottom: -4px;
+    width: 44px;
+    height: 3px;
+    background: var(--main-color);
+}
+
+.services-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, auto));
+    gap: 1.5rem;
+}
+
+.ser-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-style: solid;
+    background: #0b0a0b;
+    border-radius: 0.3rem;
+    padding: 15px;
+}
+
+.ser-box:hover{
+    transform: scale(1.05);
+    transition: 0.4s all ease-in-out;
+}
